@@ -1,4 +1,4 @@
-const tempatureButton = document.getElementById("happy")
+document.getElementById("happy");
 const output = document.getElementById("output")
 
 const temp = document.getElementById('temp')
@@ -8,34 +8,34 @@ const maxTemp = document.getElementById('maxTemp')
 const lowTemp = document.getElementById('lowTemp')
 const weatherType = document.getElementById('weatherType')
 
-temp.addEventListener('click', function(e) {
+temp.addEventListener('click', function() {
     output.style.opacity = 1;
     fetch('https://api.openweathermap.org/data/2.5/weather?id=4160021&units=imperial&appid=e743c2a63bc0a7fdd6b2299493d3570a').then
     (response => response.json().then
     (json => output.innerText = `The temperature is ${json.main.temp} degrees farenheit`))
 })
 
-humidity.addEventListener('click', function(e) {
+humidity.addEventListener('click', function() {
     fetch('https://api.openweathermap.org/data/2.5/weather?id=4160021&units=imperial&appid=e743c2a63bc0a7fdd6b2299493d3570a').then
     (response => response.json().then
     (json => output.innerText = `The humidity is ${json.main.humidity}`))
 })
 
-feelslike.addEventListener('click', function(e) {
+feelslike.addEventListener('click', function() {
     output.style.opacity = 1;
     fetch('https://api.openweathermap.org/data/2.5/weather?id=4160021&units=imperial&appid=e743c2a63bc0a7fdd6b2299493d3570a').then
     (response => response.json().then
     (json => output.innerText = `It feels like ${json.main.feels_like} degrees fahrenheit`))
 })
 
-maxTemp.addEventListener('click', function(e) {
+maxTemp.addEventListener('click', function() {
     output.style.opacity = 1;
     fetch('https://api.openweathermap.org/data/2.5/weather?id=4160021&units=imperial&appid=e743c2a63bc0a7fdd6b2299493d3570a').then
     (response => response.json().then
     (json => output.innerText = `The high is ${json.main.temp_max} degrees fahrenheit`))
 })
 
-lowTemp.addEventListener('click', function(e) {
+lowTemp.addEventListener('click', function() {
     output.style.opacity = 1;
      fetch('https://api.openweathermap.org/data/2.5/weather?id=4160021&units=imperial&appid=e743c2a63bc0a7fdd6b2299493d3570a').then
     (response => response.json().then
@@ -43,7 +43,7 @@ lowTemp.addEventListener('click', function(e) {
 })
 
 
-weatherType.addEventListener('click', function(e) {
+weatherType.addEventListener('click', function() {
     output.style.opacity = 1;
     fetch('https://api.openweathermap.org/data/2.5/weather?id=4160021&units=imperial&appid=e743c2a63bc0a7fdd6b2299493d3570a').then
     (response => response.json().then
