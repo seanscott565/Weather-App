@@ -3,10 +3,13 @@ const output = document.getElementById("output")
 
 const temp = document.getElementById('temp')
 const humidity = document.getElementById('humidity')
-const feelslike = document.getElementById('feelslike')
+const feelsLike = document.getElementById('feelslike')
 const maxTemp = document.getElementById('maxTemp')
 const lowTemp = document.getElementById('lowTemp')
 const weatherType = document.getElementById('weatherType')
+const windSpeed = document.getElementById('windSpeed')
+const windDirection = document.getElementById('windDirection')
+const sunrise = document.getElementById('sunrise')
 
 temp.addEventListener('click', function() {
     output.style.opacity = 1;
@@ -21,7 +24,7 @@ humidity.addEventListener('click', function() {
     (json => output.innerText = `The humidity is ${json.main.humidity}`))
 })
 
-feelslike.addEventListener('click', function() {
+feelsLike.addEventListener('click', function() {
     output.style.opacity = 1;
     fetch('https://api.openweathermap.org/data/2.5/weather?id=4160021&units=imperial&appid=e743c2a63bc0a7fdd6b2299493d3570a').then
     (response => response.json().then
@@ -50,3 +53,11 @@ weatherType.addEventListener('click', function() {
     (json => output.innerHTML = ` <img src="http://openweathermap.org/img/wn/${json.weather[0].icon}@2x.png" />${json.weather[0].description}`))
 
 })
+
+windSpeed.addEventListener('click', function() {
+    output.style.opacity = 1;
+    fetch('https://api.openweathermap.org/data/2.5/weather?id=4160021&units=imperial&appid=e743c2a63bc0a7fdd6b2299493d3570a').then
+    (response => response.json().then
+    (json => output.innerText = `The wind speed is ${json.wind.speed} mph`))
+})
+
