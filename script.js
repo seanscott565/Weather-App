@@ -61,3 +61,9 @@ windSpeed.addEventListener('click', function() {
     (json => output.innerText = `The wind speed is ${json.wind.speed} mph`))
 })
 
+windDirection.addEventListener('click', function() {
+    output.style.opacity = 1;
+    fetch('https://api.openweathermap.org/data/2.5/weather?id=4160021&units=imperial&appid=e743c2a63bc0a7fdd6b2299493d3570a').then
+    (response => response.json().then
+    (json => output.innerText = `The wind direction is ${json.wind.deg} degrees`))
+}
