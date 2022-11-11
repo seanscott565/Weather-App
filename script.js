@@ -73,4 +73,4 @@ sunrise.addEventListener('click', function() {
     fetch('https://api.openweathermap.org/data/2.5/weather?id=4160021&units=imperial&appid=e743c2a63bc0a7fdd6b2299493d3570a').then
     (response => response.json().then
     (json => output.innerText = `The sunrise is ${json.sys.sunrise}`))
-}}
+})
