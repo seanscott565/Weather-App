@@ -1,5 +1,15 @@
 # Weather-App
-A weather app that takes API requests to openweathermap.org to display weather from Jacksonville Florida :)
 
+A weather app that shows the current weather of Jacksonville Florida.
 
-This is fully done and will no longer receive any updates
+## Technologies
+
+- HTML
+- CSS
+- JavaScript
+
+## Installation
+
+1. Clone the repo
+   ```sh
+   git clone
